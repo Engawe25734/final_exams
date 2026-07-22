@@ -24,13 +24,13 @@ def load_json_data(db):
 
             data = []
 
-           for line in file:
+            for line in file:
 
-              if line.strip():
+                if line.strip():
 
-                 data.append(
-                    json.loads(line)
-                  )
+                    data.append(
+                        json.loads(line)
+                    )
 
 
         review_collection = db["ReviewData"]
