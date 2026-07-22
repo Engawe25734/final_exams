@@ -21,7 +21,16 @@ def load_json_data(db):
     try:
 
         with open(filename, "r", encoding="utf-8") as file:
-            data = json.load(file)
+
+            data = []
+
+           for line in file:
+
+              if line.strip():
+
+                 data.append(
+                    json.loads(line)
+                  )
 
 
         review_collection = db["ReviewData"]
